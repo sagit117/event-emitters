@@ -1,0 +1,21 @@
+{
+  "name": "event-emmiters",
+  "version": "1.0.0",
+  "description": "event emitters class",
+  "main": "dist/index.js",
+  "files": ["dist"],
+  "keywords": [
+    "event",
+    "emitters"
+  ],
+  "scripts": {
+    "build": "tsc -m commonjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pavel Aksenov <sagit117@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "typescript": "^4.3.5"
+  },
+  "private": false
+}
