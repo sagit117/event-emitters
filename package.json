@@ -1,9 +1,9 @@
 {
-  "name": "event-emmiters",
-  "version": "1.0.0",
+  "name": "event-emitters-class",
+  "version": "1.0.22",
   "description": "event emitters class",
-  "main": "dist/index.js",
-  "files": ["dist"],
+  "main": "index.js",
+  "types": "eventemitters.d.ts",
   "keywords": [
     "event",
     "emitters"
@@ -14,8 +14,12 @@
   },
   "author": "Pavel Aksenov <sagit117@gmail.com>",
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
     "typescript": "^4.3.5"
   },
-  "private": false
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sagit117/event-emitters"
+  }
 }
