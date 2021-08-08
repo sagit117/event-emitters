@@ -1,22 +1,40 @@
 {
   "compilerOptions": {
-    "target": "es6",
-    "lib": ["es2015"],
     "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
+    "checkJs": true,
     "allowSyntheticDefaultImports": true,
+    "declaration": false,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "noImplicitAny": false,
+    "noLib": false,
+    "sourceMap": false,
     "strict": true,
+    "strictPropertyInitialization": false,
+    "suppressImplicitAnyIndexErrors": true,
+    "target": "es6",
+    "module": "esnext",
+    "baseUrl": ".",
+    "removeComments": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
-    "moduleResolution": "node",
     "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true
+    "isolatedModules": false,
+    "rootDir": "./",
+    "outDir": "./dist",
+    "emitDecoratorMetadata": true,
   },
-  "files": ["index.ts"],
+  "exclude": [
+    "./node_modules"
+  ],
   "include": [
-    "src/**/*.ts"
+    "./src/**/*.ts",
+    "./src/**/*.js",
+    "**/*"
   ]
 }

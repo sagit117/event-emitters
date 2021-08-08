@@ -1,10 +1,10 @@
-import { IEventEmittersStack, EventEmitters } from "./eventemitters";
+import EventEmitters, { IEventEmittersStack } from "./index.d";
 
 /**
  * Базовый класс для создания прослушиваемых событий
  */
 export default class EventEmittersClass implements EventEmitters {
-    stackEmitters: IEventEmittersStack = {}
+    private stackEmitters: IEventEmittersStack = {}
 
     /**
      * Подписка на событие

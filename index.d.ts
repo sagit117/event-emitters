@@ -2,9 +2,7 @@ export interface IEventEmittersStack {
     [key: string]: Function[]
 }
 
-export class EventEmitters {
-    stackEmitters: IEventEmittersStack
-
+export default class EventEmitters {
     /**
      * Подписка на событие
      * @param eventName - имя события

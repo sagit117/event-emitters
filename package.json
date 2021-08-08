@@ -1,15 +1,15 @@
 {
   "name": "event-emitters-class",
-  "version": "1.0.23",
+  "version": "1.0.25",
   "description": "event emitters class",
-  "main": "index.js",
-  "types": "eventemitters.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "keywords": [
     "event",
     "emitters"
   ],
   "scripts": {
-    "build": "tsc -m commonjs",
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Pavel Aksenov <sagit117@gmail.com>",
@@ -21,5 +21,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/sagit117/event-emitters"
-  }
+  },
+  "files": ["dist"]
 }
