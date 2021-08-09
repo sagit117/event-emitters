@@ -21,14 +21,14 @@ export default new BusinessLogicEmitters()
 ```typescript
 import BusinessLogicEmitters from 'BusinessLogicEmitters'
 
-BusinessLogicEmitters.addListeners('onClickBtn', (params) => console.log('click btn', params.id))
+BusinessLogicEmitters.addListeners('onClickBtn', (params) => console.log('click btn id:', params.id))
 ```
 
 ```typescript
 import BusinessLogicEmitters from 'BusinessLogicEmitters'
 
-BusinessLogicEmitters.emit('onClickBtn', { id: 1 }) // log click btn
+BusinessLogicEmitters.emit('onClickBtn', { id: 1 }) // log > click btn id: 1
 
 // remove listener
-BusinessLogicEmitters.removeListener('onClickBtn', (params) => console.log('click btn', params.id))
+BusinessLogicEmitters.removeListener('onClickBtn', (params) => console.log('click btn id:', params.id))
 ```
