@@ -14,7 +14,12 @@ export default class EventEmittersClass {
         }
     }
     emit(eventName, ...args) {
-        this.stackEmitters[eventName].forEach((callback) => callback(...args));
+        if (eventName in this.stackEmitters) {
+            this.stackEmitters[eventName].forEach((callback) => callback(...args));
+        }
+        else {
+            throw new Error("Отсутствует событие");
+        }
     }
     removeListener(eventName, callback) {
         if (eventName in this.stackEmitters) {
