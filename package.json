@@ -1,6 +1,6 @@
 {
   "name": "event-emitters-class",
-  "version": "1.0.28",
+  "version": "1.0.29",
   "description": "event emitters class",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -22,6 +22,5 @@
     "type": "git",
     "url": "https://github.com/sagit117/event-emitters"
   },
-  "files": ["dist"],
-  "type": "module"
+  "files": ["dist"]
 }

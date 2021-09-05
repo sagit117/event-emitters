@@ -1,7 +1,7 @@
-export default class EventEmittersClass {
-    constructor() {
-        this.stackEmitters = {};
-    }
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+class EventEmittersClass {
+    stackEmitters = {};
     addListeners(eventName, callback) {
         if (eventName in this.stackEmitters) {
             const findEmit = this.stackEmitters[eventName].find((item) => item.toString() === callback.toString());
@@ -29,3 +29,4 @@ export default class EventEmittersClass {
         }
     }
 }
+exports.default = EventEmittersClass;
