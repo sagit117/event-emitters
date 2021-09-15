@@ -12,8 +12,13 @@ import EventEmittersClass from 'event-emitters-class'
 
 /**
  * Отвечает за события активирующие бизнес-логику
+ * Прототип необходимо передавать если функции слушатели должны выполняться в контексте
  */
-class BusinessLogicEmitters extends EventEmittersClass {}
+class BusinessLogicEmitters extends EventEmittersClass {
+    constructor(proto?: any) {
+        super(proto);
+    }
+}
 
 export default new BusinessLogicEmitters()
 ```
