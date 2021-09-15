@@ -1,6 +1,6 @@
 {
   "name": "event-emitters-class",
-  "version": "1.0.30",
+  "version": "1.0.31",
   "description": "event emitters class",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

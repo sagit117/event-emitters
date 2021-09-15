@@ -5,6 +5,11 @@ import EventEmitters, { IEventEmittersStack } from "./index.d";
  */
 export default class EventEmittersClass implements EventEmitters {
     private stackEmitters: IEventEmittersStack = {}
+    private readonly proto: any;
+
+    constructor(proto?: any) {
+        this.proto = proto
+    }
 
     /**
      * Подписка на событие
@@ -32,7 +37,7 @@ export default class EventEmittersClass implements EventEmitters {
      */
     public emit(eventName: string, ...args: any) {
         if (eventName in this.stackEmitters) {
-            this.stackEmitters[eventName].forEach((callback) => callback.call(callback.prototype, ...args));
+            this.stackEmitters[eventName].forEach((callback) => this.proto ? callback.call(this.proto, ...args) : callback(...args));
         } else {
             throw new Error("Отсутствует событие");
         }

@@ -3,6 +3,7 @@ export interface IEventEmittersStack {
 }
 
 export default class EventEmitters {
+    constructor(proto?: any)
     /**
      * Подписка на событие
      * @param eventName - имя события

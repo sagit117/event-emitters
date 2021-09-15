@@ -2,6 +2,10 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 class EventEmittersClass {
     stackEmitters = {};
+    proto;
+    constructor(proto) {
+        this.proto = proto;
+    }
     addListeners(eventName, callback) {
         if (eventName in this.stackEmitters) {
             const findEmit = this.stackEmitters[eventName].find((item) => item.toString() === callback.toString());
@@ -15,7 +19,7 @@ class EventEmittersClass {
     }
     emit(eventName, ...args) {
         if (eventName in this.stackEmitters) {
-            this.stackEmitters[eventName].forEach((callback) => callback(...args));
+            this.stackEmitters[eventName].forEach((callback) => this.proto ? callback.call(this.proto, ...args) : callback(...args));
         }
         else {
             throw new Error("Отсутствует событие");
