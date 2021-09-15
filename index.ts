@@ -32,7 +32,7 @@ export default class EventEmittersClass implements EventEmitters {
      */
     public emit(eventName: string, ...args: any) {
         if (eventName in this.stackEmitters) {
-            this.stackEmitters[eventName].forEach((callback) => callback(...args));
+            this.stackEmitters[eventName].forEach((callback) => callback.call(callback.prototype, ...args));
         } else {
             throw new Error("Отсутствует событие");
         }
